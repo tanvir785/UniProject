@@ -1,0 +1,442 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BEGINNING OF STYLES */
+
+body {
+	background-color: #f1f1f1;
+	font-family: sans-serif;
+	font-size: 13px;
+}
+
+/* Navbar */
+
+nav {
+	height: 50px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav ul {
+	padding: 0 35px;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	color: #777;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 50px;
+}
+
+nav ul li a:hover {
+	color: #333;
+}
+
+nav #menu {
+	position: absolute;
+	margin-left: -35px;
+	width: 165px;
+	height: 100vh;
+	padding-top: 15px;
+	background-color: white;
+	display: none;
+}
+
+nav li:active #menu {
+	display: block;
+}
+
+nav #menu li {
+	width: 100%;
+	height: 30px;
+	color: Crimson;
+	font-size: 13px;
+}
+
+nav #menu li a {
+	line-height: 30px;
+	height: 30px;
+	font-size: 13px;
+}
+
+nav #menu hr {
+	margin: 10px 0;
+}
+
+nav #menu li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+nav .logo {
+	height: 40px;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+nav form {
+	line-height: 50px;
+	margin-left: 90px;
+}
+
+nav input {
+	padding: 5px;
+}
+
+nav input[type="text"] {
+	width: calc(50vw - 100px);
+}
+
+nav input[type="button"] {
+	width: 60px;
+}
+
+nav #right {
+	float: right;
+}
+
+nav #upload {
+	margin-right: 40px;
+}
+
+nav #user-pick {
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 15px;
+	margin-left: 25px;
+}
+
+/* body */
+
+#content {
+	margin: 60px 4px 70px 4px;
+}
+
+#content::before, 
+#content::after {
+    content:"";
+    display:table;
+}
+#content::after {
+    clear:both;
+}
+#content {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+section {
+	width: 67%;
+	float: left;
+}
+
+section #video {
+	height: 480px;
+	text-align: center;
+}
+
+/* channel and video description */
+
+section header {
+	background-color: white;
+	margin: 10px 0;
+	padding: 15px;
+}
+
+section header h1 {
+	font-size: 19px;
+	width: 75%;
+	line-height: 25px;
+}
+
+section #channel {
+	margin: 10px 0;
+}
+
+#channel::before, 
+#channel::after {
+    content:"";
+    display:table;
+}
+#channel::after {
+    clear:both;
+}
+#channel {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+section #channel img {
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+section #channel p {
+	font-weight: bold;
+	margin-bottom: 13px;
+}
+
+section #channel table,
+section #channel th {
+	border: 1px solid #777;
+	padding: 4px;
+	color: #777;
+	background-color: rgba(153, 153, 153, 0.1);
+}
+
+section header a {
+	color: #777;
+	text-decoration: none;
+}
+
+section #actions a {
+	margin-right: 15px;
+}
+
+section article {
+	background-color: white;
+	margin-bottom: 10px;
+	padding: 15px 15px 5px 15px;
+}
+
+section h3 {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+section article a {
+	color: black;
+	text-decoration: none;
+}
+
+section article:hover a {
+	color: DodgerBlue;
+}
+
+section article a:hover {
+	text-decoration: underline;
+}
+
+section article hr {
+	margin-top: 20px;
+}
+
+section article h2 {
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: #777;
+	text-align: center;
+}
+
+/* comments section */
+section #comments {
+	background-color: white;
+	padding: 15px;
+}
+
+section #add-comment {
+	margin: 20px 0;
+}
+
+section #add-comment textarea {
+	margin-left: 20px; 
+	width: 85%;
+	color: #777;
+}
+
+section #comments img {
+	width: 50px;
+}
+
+.comment::before, 
+.comment::after {
+    content:"";
+    display:table;
+}
+.comment::after {
+    clear:both;
+}
+.comment {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+    margin-bottom: 20px;
+}
+
+section .comment img {
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+section .comment h3 {
+	font-weight: bold;
+	color: DodgerBlue;
+	margin-bottom: 10px;
+}
+
+/* sidebar section */
+
+aside {
+	width: 33%;
+	float: right;
+}
+
+aside #up-next {
+	margin-left: 10px;
+	background-color: white;
+	padding: 10px;
+}
+
+.next::before, 
+.next::after {
+    content:"";
+    display:table;
+}
+.next::after {
+    clear:both;
+}
+.next {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+    margin-bottom: 20px;
+}
+
+aside .next a {
+	color: black;
+	text-decoration: none;
+}
+
+aside .next a p {
+	color: #777;
+}
+
+aside .next:hover h3 {
+	color: DodgerBlue;
+}
+
+aside .next img {
+	width: 40%;
+	margin-right: 10px;
+	float: left;
+}
+
+aside .next h3 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+aside hr {
+	margin: 20px 0;
+}
+
+/* footer */
+
+footer {
+	background-color: white;
+	height: 130px;
+	padding: 10px 30px;
+}
+
+footer .logo {
+	height: 40px;
+}
+
+.row::before, 
+.row::after {
+    content:"";
+    display:table;
+}
+.row::after {
+    clear:both;
+}
+.row {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+    margin-bottom: 10px;
+}
+
+#buttons ul li {
+
+	
+	height: 40px;
+	line-height: 40px;
+}
+
+footer input {
+	padding: 5px;
+	color: #777;
+}
+
+footer ul li {
+		float: left;
+		margin: 0 10px;
+}
+
+footer #bold {
+	font-weight: bold;
+}
+
+footer #small {
+	font-size: 12px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #777;
+}
+
+footer a:hover {
+	color: DodgerBlue;
+	text-decoration: underline;
+}
+
+strong {
+	font-weight: bold;
+}
